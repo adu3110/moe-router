@@ -1,8 +1,9 @@
 # moe-router
 
-Mixture-of-Experts token routing implemented from scratch. No PyTorch. No Transformers. Pure NumPy (Python) and zero-dependency TypeScript.
+> **8 experts, top-2 routing: you run 8× the parameters at 2× the compute per token.**  
+> Mixtral-8x7B and DeepSeek-V2 are built on this — zero PyTorch, pure NumPy, trace every number.
 
-Every LLM like Mixtral-8x7B or DeepSeek-V2 uses MoE to run more parameters without paying more compute. This repo shows exactly how it works — small enough to trace every number by hand.
+Mixture-of-Experts token routing implemented from scratch. No ML framework. Small enough to understand in one sitting.
 
 ---
 
@@ -117,3 +118,9 @@ moe-router/
 - **Mixtral-8x7B** — 8 experts, top-2 routing, 46.7B total params, 12.9B active per token
 - **DeepSeek-V2** — 160 experts, top-6 routing
 - **Switch Transformer** (Fedus et al., 2022) — introduced the load-balancing loss implemented here
+
+---
+
+## License
+
+MIT
